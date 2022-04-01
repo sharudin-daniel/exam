@@ -3,7 +3,7 @@
     author: sha
     changes:
       - insert:
-          tableName: roles
+          tableName: user1
           columns:
             - column:
                 name: id
@@ -21,7 +21,7 @@
                 name: role_id
                 value: "1"
       - insert:
-          tableName: roles
+          tableName: user1
           columns:
             - column:
                 name: id
@@ -39,7 +39,7 @@
                 name: role_id
                 value: "2"
       - insert:
-          tableName: roles
+          tableName: user1
           columns:
             - column:
                 name: id

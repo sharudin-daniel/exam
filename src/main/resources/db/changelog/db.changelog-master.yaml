@@ -142,7 +142,7 @@ databaseChangeLog:
                   name: message
                   type: varchar(300)
   - changeSet:
-      id: fill
+      id: fill-good-group
       author: sha
       changes:
         - insert:
@@ -205,201 +205,201 @@ databaseChangeLog:
               - column:
                   name: priority
                   value: "3"
-        - changeSet:
-            id: fill
-            author: sha
-            changes:
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "1"
-                    - column:
-                        name: name
-                        value: "Panasonic M80"
-                    - column:
-                        name: price
-                        value: "500"
-                    - column:
-                        name: amount
-                        value: "30"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "1"
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "2"
-                    - column:
-                        name: name
-                        value: "Sony 40TP"
-                    - column:
-                        name: price
-                        value: "600"
-                    - column:
-                        name: amount
-                        value: "45"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "1"
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "3"
-                    - column:
-                        name: name
-                        value: "Potato"
-                    - column:
-                        name: price
-                        value: "5"
-                    - column:
-                        name: amount
-                        value: "400"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "2"
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "4"
-                    - column:
-                        name: name
-                        value: "Banana"
-                    - column:
-                        name: price
-                        value: "10"
-                    - column:
-                        name: amount
-                        value: "250"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "2"
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "5"
-                    - column:
-                        name: name
-                        value: "Pineaple"
-                    - column:
-                        name: price
-                        value: "15"
-                    - column:
-                        name: amount
-                        value: "30"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "2"
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "6"
-                    - column:
-                        name: name
-                        value: "Aspirin"
-                    - column:
-                        name: price
-                        value: "10"
-                    - column:
-                        name: amount
-                        value: "150"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "3"
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "7"
-                    - column:
-                        name: name
-                        value: "Noshpa"
-                    - column:
-                        name: price
-                        value: "15"
-                    - column:
-                        name: amount
-                        value: "80"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "3"
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "8"
-                    - column:
-                        name: name
-                        value: "Shirt"
-                    - column:
-                        name: price
-                        value: "25"
-                    - column:
-                        name: amount
-                        value: "40"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "4"
-              - insert:
-                  tableName: goods
-                  columns:
-                    - column:
-                        name: id
-                        value: "9"
-                    - column:
-                        name: name
-                        value: "Seeds"
-                    - column:
-                        name: price
-                        value: "10"
-                    - column:
-                        name: amount
-                        value: "100"
-                    - column:
-                        name: enabled
-                        value: "true"
-                    - column:
-                        name: good_group_id
-                        value: "5"
   - changeSet:
-      id: fill
+      id: fill-goods
+      author: sha
+      changes:
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "1"
+              - column:
+                  name: name
+                  value: "Panasonic M80"
+              - column:
+                  name: price
+                  value: "500"
+              - column:
+                  name: amount
+                  value: "30"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "1"
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "2"
+              - column:
+                  name: name
+                  value: "Sony 40TP"
+              - column:
+                  name: price
+                  value: "600"
+              - column:
+                  name: amount
+                  value: "45"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "1"
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "3"
+              - column:
+                  name: name
+                  value: "Potato"
+              - column:
+                  name: price
+                  value: "5"
+              - column:
+                  name: amount
+                  value: "400"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "2"
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "4"
+              - column:
+                  name: name
+                  value: "Banana"
+              - column:
+                  name: price
+                  value: "10"
+              - column:
+                  name: amount
+                  value: "250"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "2"
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "5"
+              - column:
+                  name: name
+                  value: "Pineaple"
+              - column:
+                  name: price
+                  value: "15"
+              - column:
+                  name: amount
+                  value: "30"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "2"
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "6"
+              - column:
+                  name: name
+                  value: "Aspirin"
+              - column:
+                  name: price
+                  value: "10"
+              - column:
+                  name: amount
+                  value: "150"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "3"
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "7"
+              - column:
+                  name: name
+                  value: "Noshpa"
+              - column:
+                  name: price
+                  value: "15"
+              - column:
+                  name: amount
+                  value: "80"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "3"
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "8"
+              - column:
+                  name: name
+                  value: "Shirt"
+              - column:
+                  name: price
+                  value: "25"
+              - column:
+                  name: amount
+                  value: "40"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "4"
+        - insert:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  value: "9"
+              - column:
+                  name: name
+                  value: "Seeds"
+              - column:
+                  name: price
+                  value: "10"
+              - column:
+                  name: amount
+                  value: "100"
+              - column:
+                  name: enabled
+                  value: "true"
+              - column:
+                  name: good_group_id
+                  value: "5"
+  - changeSet:
+      id: fill-sales
       author: sha
       changes:
         - insert:
@@ -550,7 +550,7 @@ databaseChangeLog:
                   name: sale_date
                   value: "2022-02-03"
   - changeSet:
-      id: fill
+      id: fill-roles
       author: sha
       changes:
         - insert:
@@ -581,11 +581,11 @@ databaseChangeLog:
                   name: name
                   value: "ROLE_OWNER"
   - changeSet:
-      id: fill
+      id: fill-user
       author: sha
       changes:
         - insert:
-            tableName: roles
+            tableName: users
             columns:
               - column:
                   name: id
@@ -603,7 +603,7 @@ databaseChangeLog:
                   name: role_id
                   value: "1"
         - insert:
-            tableName: roles
+            tableName: users
             columns:
               - column:
                   name: id
@@ -621,7 +621,7 @@ databaseChangeLog:
                   name: role_id
                   value: "2"
         - insert:
-            tableName: roles
+            tableName: users
             columns:
               - column:
                   name: id
