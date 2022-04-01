@@ -87,8 +87,8 @@ databaseChangeLog:
                   name: amount_sold
                   type: bigint
               - column:
-                  name: amount_sold
-                  type: price_for_one
+                  name: price_for_one
+                  type: bigint
               - column:
                   name: total_sum
                   type: bigint
@@ -121,3 +121,23 @@ databaseChangeLog:
               - column:
                   name: role_id
                   type: bigint
+  - changeSet:
+      id: create-logs
+      author: sha
+      changes:
+        - createTable:
+            tableName: logs
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: date
+                  type: date
+              - column:
+                  name: message
+                  type: varchar(300)

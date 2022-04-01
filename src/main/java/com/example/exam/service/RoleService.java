@@ -26,6 +26,14 @@ public class RoleService {
         return roleMapper.findAll();
     }
 
+    public void deleteById(Long id) {
+        roleMapper.deleteById(id);
+    }
+
+    public void deleteAll() {
+        roleMapper.deleteAll();
+    }
+
     public void update(Long id, Role newRole) {
         Role oldRole = roleMapper.findById(id);
         if(newRole.getName()!=null)

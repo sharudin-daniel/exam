@@ -2,6 +2,7 @@ package com.example.exam.controller;
 
 import com.example.exam.model.Good;
 import com.example.exam.model.User;
+import com.example.exam.service.MyLogService;
 import com.example.exam.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,42 +16,44 @@ import java.util.List;
 @RequiredArgsConstructor
 public class UserController {
     private final UserService userService;
+    private final MyLogService myLogService;
 
     @GetMapping("/{id}")
     private User getById(@PathVariable Long id) {
         User user = userService.getById(id);
-        log.info("GET method for http://localhost:8070/admin/" + id +
+        myLogService.insert("GET method for http://localhost:8070/users/" + id +
                 " --- Returned "+ user.toString());
         return  user;
     }
 
     @GetMapping("")
     private List<User> getAll() {
-        log.info("GET method for http://localhost:8070/admin");
+        myLogService.insert("GET method for http://localhost:8070/users");
         return  userService.getAll();
     }
 
     @DeleteMapping("/{id}")
     private void deleteById(@PathVariable Long id) {
-        log.info("Start of DELETE method for http://localhost:8070/admin/"+id);
+        myLogService.insert("Start of DELETE method for http://localhost:8070/users/"+id);
         userService.deleteById(id);
     }
 
     @DeleteMapping("")
     private void deleteAll() {
-        log.info("Start of DELETE method for http://localhost:8070/admin");
+        myLogService.insert("Start of DELETE method for http://localhost:8070/users");
         userService.deleteAll();
     }
 
     @PutMapping("/{id}")
     private void update(@PathVariable("id") Long id, @RequestBody User user) {
-        log.info("Start of PUT method for http://localhost:8070/admin/"+id);
+        myLogService.insert("Start of PUT method for http://localhost:8070/users/"+id);
         userService.update(id, user);
     }
 
     @PostMapping("")
     private void create( @RequestBody User user) {
-        log.info("Start of POST method for http://localhost:8070/admin");
+        myLogService.insert("Start of POST method for http://localhost:8070/users");
+
         userService.insert(user);
     }
 
