@@ -1,0 +1,58 @@
+- changeSet:
+    id: fill
+    author: sha
+    changes:
+      - insert:
+          tableName: roles
+          columns:
+            - column:
+                name: id
+                value: "1"
+            - column:
+                name: active
+                value: "true"
+            - column:
+                name: name
+                value: "admin"
+            - column:
+                name: password
+                value: "password"
+            - column:
+                name: role_id
+                value: "1"
+      - insert:
+          tableName: roles
+          columns:
+            - column:
+                name: id
+                value: "2"
+            - column:
+                name: active
+                value: "true"
+            - column:
+                name: name
+                value: "user"
+            - column:
+                name: password
+                value: "password"
+            - column:
+                name: role_id
+                value: "2"
+      - insert:
+          tableName: roles
+          columns:
+            - column:
+                name: id
+                value: "3"
+            - column:
+                name: active
+                value: "true"
+            - column:
+                name: name
+                value: "owner"
+            - column:
+                name: password
+                value: "password"
+            - column:
+                name: role_id
+                value: "3"
