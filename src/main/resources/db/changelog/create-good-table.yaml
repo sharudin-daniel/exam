@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-good
+      author: sha
+      changes:
+        - createTable:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+              - column:
+                  name: price
+                  type: bigint
+              - column:
+                  name: amount
+                  type: bigint
+              - column:
+                  name: enabled
+                  type: boolean
+              - column:
+                  name: good_group_id
+                  type: bigint

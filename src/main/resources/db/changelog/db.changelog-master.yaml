@@ -1,0 +1,123 @@
+databaseChangeLog:
+  - logicalFilePath: db/changelog/db.changelog-master.yaml
+  - changeSet:
+      id: create-good-group
+      author: sha
+      changes:
+        - createTable:
+            tableName: good_group
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+              - column:
+                  name: priority
+                  type: bigint
+  - changeSet:
+      id: create-good
+      author: sha
+      changes:
+        - createTable:
+            tableName: goods
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+              - column:
+                  name: price
+                  type: bigint
+              - column:
+                  name: amount
+                  type: bigint
+              - column:
+                  name: enabled
+                  type: boolean
+              - column:
+                  name: good_group_id
+                  type: bigint
+  - changeSet:
+      id: create-roles
+      author: sha
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(200)
+  - changeSet:
+      id: create-sales
+      author: sha
+      changes:
+        - createTable:
+            tableName: sales
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: id_of_good
+                  type: bigint
+              - column:
+                  name: amount_sold
+                  type: bigint
+              - column:
+                  name: amount_sold
+                  type: price_for_one
+              - column:
+                  name: total_sum
+                  type: bigint
+              - column:
+                  name: sale_date
+                  type: date
+  - changeSet:
+      id: create-users
+      author: sha
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: active
+                  type: boolean
+              - column:
+                  name: name
+                  type: varchar(200)
+              - column:
+                  name: password
+                  type: varchar(200)
+              - column:
+                  name: role_id
+                  type: bigint

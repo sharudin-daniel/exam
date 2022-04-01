@@ -1,0 +1,17 @@
+package com.example.exam.model;
+
+import lombok.Data;
+
+@Data
+public class User {
+
+    private Long id;
+
+    private String name;
+
+    private String password;
+
+    private boolean active;
+
+    private Role role;
+}
